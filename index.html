@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <title>Landing Store</title>
+    <style>
+      .nav-item {
+        margin-left: 40px;
+      }
+      #img {
+        width: fit-content;
+        height: 500px;
+      }
+      #carouselExampleIndicators {
+        margin-top: 20px;
+      }
+      #products {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        height: 200px;
+      }
+      #products p {
+        margin-bottom: 50px;
+        margin-top: 50px;
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav
+      class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid d-flex align-items-center">
+        <div class="col-8">
+          <a class="navbar-brand" href="#">
+            <img
+              width="70px"
+              src="data:image/png;base64,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"
+              alt="Logo"
+              width="46"
+              class="d-inline-block"
+            />
+            Nike
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div id="menu" class="col-4">
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav d-flex justify-content-between" id="test">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">Products</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--carousel-->
+    <div class="container" id="home">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img id="img" src="/img3.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img id="img" src="/img2.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img id="img" src="/img1.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="container-fluid row" id="products">
+      <h3>Consult our products</h3>
+      <p>
+        Nike, Inc. was considered by many to be the most powerful and
+        influential force in sports. So popular was its Air Jordan brand, for
+        example, that the company refrained from introducing new products on
+        school days in an effort to combat truancy. One journalist concluded
+        that it was “difficult to locate a three-year-old — or, for that matter,
+        a Trobriand Islander or an Inuit hunter — who can't tell you that Jordan
+        is a Nike man
+      </p>
+      <div id="cards" class="row d-flex justify-content-around">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/5e314a51-d42a-4d4f-9ba7-43f3300e916e/brasilia-95-training-duffel-bag-medium-60l-m2FlMm.png"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Nike Brasilia Duffel Bag</h5>
+            <p class="card-text">
+              The Nike Brasilia Duffel Bag keeps all your training gear—and morA
+              side compartment stores shoes separately, while inner and outer
+              pockets help you stay organized. Use it for a trip to the gym or
+              away for the weekend.
+            </p>
+
+            <a href="#description" class="btn btn-primary">Command Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="data:image/jpeg;base64,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"
+          />
+          <div class="card-body">
+            <h5 class="card-title">nike sportswear</h5>
+            <p class="card-text">
+              Sportswear or activewear is athletic clothing, including footwear,
+              worn for sports activity or physical exercise. Sport-specific
+              clothing is worn for most sports and physical exercise, for
+              practical, comfort or safety reasons.
+            </p>
+            <a href="#" class="btn btn-success">Command Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT92J55oNRoRLj4c77_S6dUF3X7OPapuHKACw&s"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">bucket hat</h5>
+            <p class="card-text">
+              A washed fabric on the crown of the Nike Sportswear Bucket Hat
+              gives it a soft, well-worn feel. Its unstructured crown and brim
+              offer a laidback look and added coverage from the elements. Washed
+              twill fabric is soft and sturdy. Sweatband helps keep you cool and
+              dry.
+            </p>
+            <a href="#" class="btn btn-warning">Command Now</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzwqX9tMKr-CxdDH66DNZYEMUJDzP1WcuLvw&s"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Nike shoes</h5>
+            <p class="card-text">
+              Nike has acquired several apparel and footwear companies over the
+              course of its history, some of which have since been sold. In
+              order to refocus on its core ...
+            </p>
+            <a href="#" class="btn btn-danger">Command Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">&copy; all rights reserved 2024</div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
